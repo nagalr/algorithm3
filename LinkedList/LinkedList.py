@@ -20,16 +20,16 @@ class SinglyLinkedList:
         return '[' + ', '.join(result) + ']'
 
     def prepend(self, data=None):
-        self.head = ListNode(data, self.head)
+        self.head = ListNode(data=data, next=self.head)
 
     def append(self, data):
         if not self.head:
-            self.head = ListNode(data, None)
+            self.head = ListNode(data=data, next=None)
             return
         curr = self.head
         while curr.next:
             curr = curr.next
-        curr.next = ListNode(data, None)
+        curr.next = ListNode(data=data, next=None)
 
     def find(self, key):
         curr = self.head
@@ -51,29 +51,17 @@ class SinglyLinkedList:
 
     def reverse(self):
         """
-        Reverse the list using accessory list.
-        Takes O(n) time, O(n) space.
-        """
-        l2 = SinglyLinkedList()
-        curr = self.head
-        while curr:
-            l2.prepend(curr)
-            curr = curr.next
-        return l2
-
-    def reverse2(self):
-        """
         Reverse the list in-place.
         Takes O(n) time.
         """
         curr = self.head
-        prev_node = None
-        next_node = None
-        while curr:
-            next_node = curr.next
-            curr.next = prev_node
-            prev_node = curr
-            curr = next_node
-        self.head = prev_node
+        prev = None
+        next = None
 
-   
+        while curr:
+            next = curr.next
+            curr.next = prev
+            prev = curr
+            curr = next
+
+        self.head = prev
