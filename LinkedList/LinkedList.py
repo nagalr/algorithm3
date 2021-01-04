@@ -49,7 +49,7 @@ class SinglyLinkedList:
             prev.next = curr.next
             curr.next = None
 
-    def reverse2(self):
+    def reverse(self):
         """
         Reverse the list using accessory list.
         Takes O(n) time, O(n) space.
@@ -61,7 +61,7 @@ class SinglyLinkedList:
             curr = curr.next
         return l2
 
-    def reverse(self):
+    def reverse2(self):
         """
         Reverse the list in-place.
         Takes O(n) time.
@@ -76,19 +76,4 @@ class SinglyLinkedList:
             curr = next_node
         self.head = prev_node
 
-    def reverse2(self):
-        """
-        Reverse the list in-place.
-        Takes O(n) time.
-        """
-        curr = self.head
-        prev = None
-        next = None
-
-        while curr:
-            next = curr.next
-            curr.next = prev
-            prev = curr
-            curr = next
-
-        self.head = prev
+   
