@@ -76,7 +76,7 @@ class SinglyLinkedList:
             curr = next_node
         self.head = prev_node
 
-    def reverse3(self):
+    def reverse2(self):
         """
         Reverse the list in-place.
         Takes O(n) time.
