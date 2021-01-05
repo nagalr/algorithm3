@@ -25,7 +25,6 @@ class Stack:
     return self.data == []
 
 
-
 class QueueUsingStack:
 
   def __init__(self):
@@ -40,3 +39,10 @@ class QueueUsingStack:
   def dequeue(self):
     self.internal_stack.pop(0)
 
+  def peek(self):
+    if self.internal_stack.data != []:
+      return self.internal_stack.data[0]
+    return None
+
+  def isEmpty(self):
+    return self.internal_stack.isEmpty()
