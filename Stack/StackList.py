@@ -15,7 +15,10 @@ class Stack:
     else:
       return self.data.pop()
 
-  def seek(self):
+  def peek(self):
     if len(self.data) == 0:
       return None
     return self.data[len(self.data) - 1]
+
+  def isEmpty(self):
+    return self.data == []
