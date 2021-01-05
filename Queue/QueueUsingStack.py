@@ -39,3 +39,4 @@ class QueueUsingStack:
 
   def dequeue(self):
     self.internal_stack.pop(0)
+
