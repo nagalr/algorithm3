@@ -1,4 +1,3 @@
-
 class Node:
 
   def __init__(self, value=None, next=None):
@@ -38,17 +37,15 @@ class Stack:
   def pop(self):
     if self.top is None:
       return
-    if self.top and self.top.next is None:
-      self.top = None
-      self.bottom = None
-      self.length = 0
-      return
-    if self.top.next:
-      temp_top = self.top.next
-      self.top = self.top.next
-      temp_top = None
-      self.length -= 1
-
+    if self.top:
+      if self.top.next:
+        self.top = self.top.next
+        self.length -= 1
+      else:
+        self.top = None
+        self.bottom = None
+        self.length = 0
+        
   def peek(self):
     return self.top
 
