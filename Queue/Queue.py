@@ -23,7 +23,7 @@ class Queue:
             curr = curr.next
         return str(result)
 
-    def push(self, value):
+    def enqueue(self, value):
         new_node = Node(value)
         if self.first:
             self.last.next = new_node
@@ -34,7 +34,7 @@ class Queue:
             self.last = new_node
             self.length = 1
 
-    def pop(self):
+    def dequeue(self):
         if self.first:
             temp = self.first
             self.first = self.first.next
