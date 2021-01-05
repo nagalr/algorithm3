@@ -49,6 +49,8 @@ class Stack:
       temp_top = None
       self.length -= 1
 
-  def seek(self):
+  def peek(self):
     return self.top
 
+  def isEmpty(self):
+    return self.length == 0
