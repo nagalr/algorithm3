@@ -18,6 +18,7 @@ class Graph:
             self.add_vertex(node1)
         if node2 not in self.adjacentList.keys():
             self.add_vertex(node2)
+            
         curr_conn_list = self.adjacentList[node1]
         curr_conn_list.add(node2)
         self.adjacentList[node1] = curr_conn_list
@@ -28,21 +29,3 @@ class Graph:
 
     def show_connections(self):
         pass
-
-
-# Test
-g = Graph()
-g.add_vertex(2)
-g.add_edge(2,3)
-g.add_edge(2,4)
-g.add_edge(4,1)
-g.add_edge(4,1)
-g.add_edge(2,1)
-g.add_edge(2,1)
-g.add_edge(2,2)
-g.add_edge(2,2)
-g.add_edge(2,2)
-g.add_edge(2,2)
-g.add_edge(2,2)
-g.add_edge(2,2)
-print(g)
