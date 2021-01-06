@@ -18,14 +18,6 @@ class Graph:
             self.add_vertex(node1)
         if node2 not in self.adjacentList.keys():
             self.add_vertex(node2)
-            
-        curr_conn_list = self.adjacentList[node1]
-        curr_conn_list.add(node2)
-        self.adjacentList[node1] = curr_conn_list
 
-        curr_conn_list = self.adjacentList[node2]
-        curr_conn_list.add(node1)
-        self.adjacentList[node2] = curr_conn_list
-
-    def show_connections(self):
-        pass
+        self.adjacentList[node1].add(node2)
+        self.adjacentList[node2].add(node1)
