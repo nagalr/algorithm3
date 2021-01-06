@@ -120,10 +120,12 @@ class BinarySearchTree:
         return None
 
 
-
 import random
 
 b = BinarySearchTree()
 for _ in range(20):
-    b.insert(random.randint(0, 100))
+    b.insert(random.randint(0, 30))
 b.root.display()
+
+print('********* lookup for 2 **********')
+print(b.lookup(2).value if b.lookup(2) else None)
