@@ -20,12 +20,12 @@ def fibonacci_recursive(n):
 
 def fibonacci_iterative(n):
     p1, p2 = 0, 1
-    for _ in range(n - 2):
+    for i in range(n - 2):
         p1, p2 = p2, p1 + p2
 
-    return p1 + p2
+    return p1 if n == 0 else p1 + p2
 
 
 # Test
 print(fibonacci_iterative(5))
-# print(find_factorial_iterative(3))
+# print(find_factorial_iterative(5))
