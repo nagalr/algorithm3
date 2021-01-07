@@ -5,5 +5,5 @@ Data structure is a collection of data values, the relationships among them and 
 Algorithms can perform calculation, data processing and automated reasoning tasks.
 An algorithm is an unambiguous specification of how to solve a class of problems. 
 
-Presenting some of the well-known algorithms Implemented in Python.
+Presenting some of the well-known data-structors and algorithms Implemented in Python.
 
