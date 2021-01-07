@@ -1,7 +1,7 @@
 def insertion_sort(l):
     """
     Insertion Sort Implementation
-    Time O(n) run.
+    Time O(n^2) run.
     O(1) space complexity.
     """
     # finds the next item to insert
