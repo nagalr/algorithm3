@@ -9,7 +9,7 @@ def insertion_sort(l):
         if l[i] < l[i - 1]:
             item = l[i]
 
-            # locate the item in its right location
+            # moves the item to its right location
             for j in range(i, 0, -1):
                 if item < l[j - 1]:
                     l[j], l[j - 1] = l[j - 1], l[j]
