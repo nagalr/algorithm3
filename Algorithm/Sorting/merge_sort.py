@@ -2,12 +2,12 @@ def merge_sort(l):
     """
     Merge Sort Implementation.
     Time O(nlogn) run.
-    O(n) space complexity
+    O(n) space complexity, does not work in place.
     :param l: List
-    :return: None, sorts inline.
+    :return: None
     """
     if len(l) > 1:
-        mid = len(l) // 2  # rounds division to int
+        mid = len(l) // 2
         left = l[:mid]
         right = l[mid:]
 
