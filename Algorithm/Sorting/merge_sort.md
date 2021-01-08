@@ -1,1 +1,1 @@
-<a href="https://ibb.co/hM5H1K8"><img src="https://i.ibb.co/BPDjKgs/imgonline-com-ua-twotoone-r-Vrhg-Vj-XIHJ6-XGh.jpg" alt="imgonline-com-ua-twotoone-r-Vrhg-Vj-XIHJ6-XGh" border="0"></a>
+<a href="https://ibb.co/DD3FrxY"><img src="https://i.ibb.co/7J7DkwQ/imgonline-com-ua-twotoone-M7-WE5-Ll-Us-I7o-T.jpg" alt="imgonline-com-ua-twotoone-M7-WE5-Ll-Us-I7o-T" border="0"></a>
