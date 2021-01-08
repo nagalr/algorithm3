@@ -1,8 +1,10 @@
 def insertion_sort(l):
     """
-    Insertion Sort Implementation
+    Insertion Sort Implementation.
     Time O(n^2) run.
     O(1) space complexity.
+    :param l: List
+    :return: None, orders in place.
     """
     # finds the next item to insert
     for i in range(1, len(l)):
