@@ -119,7 +119,7 @@ class BinarySearchTree:
 
         return None
 
-    def BSF(self):
+    def bfs(self):
         """
         BFS Implementation.
         Top-to-bottom, Scans each level from left to right.
@@ -150,7 +150,7 @@ b.insert(10)
 b.insert(34)
 b.root.display()
 print()
-print(b.BSF())
+print(b.bfs())
 
 # usual print
 # print(b)
