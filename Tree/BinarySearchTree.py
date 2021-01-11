@@ -132,10 +132,15 @@ class BinarySearchTree:
 
         while current_node:
             answer_list.append(current_node)
-            child_queue.append(current_node.left)
-            child_queue.append(current_node.right)
+            if current_node.left:
+                child_queue.append(current_node.left)
+            if current_node.right:
+                child_queue.append(current_node.right)
 
-            current_node = child_queue.pop(0)
+            if child_queue:
+                current_node = child_queue.pop(0)
+            else:
+                break
 
         return [x.value for x in answer_list]
 
