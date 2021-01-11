@@ -119,13 +119,38 @@ class BinarySearchTree:
 
         return None
 
+    def BSF(self):
+        """
+        BFS Implementation.
+        Top-to-bottom, Scans each level from left to right.
+        Time O(n) run.
+        :return: A List with nodes values, BFS style.
+        """
+        current_node = self.root
+        answer_list = []
+        child_queue = []
 
-import random
+        while current_node:
+            answer_list.append(current_node)
+            child_queue.append(current_node.left)
+            child_queue.append(current_node.right)
+
+            current_node = child_queue.pop(0)
+
+        return [x.value for x in answer_list]
+
 
 b = BinarySearchTree()
-for _ in range(20):
-    b.insert(random.randint(0, 30))
+b.insert(9)
+b.insert(6)
+b.insert(8)
+b.insert(2)
+b.insert(12)
+b.insert(10)
+b.insert(34)
 b.root.display()
+print()
+print(b.BSF())
 
-print('********* lookup for 2 **********')
-print(b.lookup(2).value if b.lookup(2) else None)
+# usual print
+# print(b)
