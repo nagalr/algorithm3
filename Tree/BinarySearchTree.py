@@ -126,36 +126,71 @@ class BinarySearchTree:
         Time O(n) run.
         :return: A List with nodes values, BFS style.
         """
+
         current_node = self.root
-        answer_list = []
-        child_queue = []
+        answer = []
+        children = []
 
         while current_node:
-            answer_list.append(current_node)
+            answer.append(current_node)
             if current_node.left:
-                child_queue.append(current_node.left)
-            if current_node.right:
-                child_queue.append(current_node.right)
+                children.append(current_node.left)
 
-            if child_queue:
-                current_node = child_queue.pop(0)
+            if current_node.right:
+                children.append(current_node.right)
+
+            if children:
+                current_node = children.pop(0)
             else:
                 break
 
-        return [x.value for x in answer_list]
+        return [x.value for x in answer]
+
+    def bfs_rec(self, queue, answer):
+        if not queue:
+            return answer
+
+        current = queue.pop(0)
+        answer.append(current)
+
+        if current.left:
+            queue.append(current.left)
+        if current.right:
+            queue.append(current.right)
+
+        self.bfs_rec(queue, answer)
+
+        return [x.value for x in answer]
 
 
-b = BinarySearchTree()
-b.insert(9)
-b.insert(6)
-b.insert(8)
-b.insert(2)
-b.insert(12)
-b.insert(10)
-b.insert(34)
-b.root.display()
-print()
-print(b.bfs())
+
+# b = BinarySearchTree()
+#
+# ########## FIRST BSF ####################
+#
+# b.insert(9)
+# b.insert(4)
+# b.insert(20)
+# b.insert(1)
+# b.insert(6)
+# b.insert(15)
+# b.insert(170)
+# b.root.display() if b.root else None
+# print()  # line break
+# print(b.bfs())
 
 # usual print
 # print(b)
+
+########### BFS_REC PRINT ##################
+
+b = BinarySearchTree()
+b.insert(9)
+b.insert(4)
+b.insert(20)
+b.insert(1)
+b.insert(6)
+b.insert(15)
+b.insert(170)
+
+print(b.bfs_rec([b.root], []))
