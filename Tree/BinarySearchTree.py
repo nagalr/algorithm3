@@ -216,7 +216,6 @@ b.root.display() if b.root else None
 ########### BFS INORDER PREODER POSTORDER ##################
 
 print()  # line break
-# print(b.bfs_rec([b.root], []))
 b.dfs_inorder(b.root)
 print()  # line break
 b.dfs_preorder(b.root)
