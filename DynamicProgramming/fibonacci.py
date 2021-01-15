@@ -3,6 +3,10 @@ import time
 # Global variable to count calculations number
 calc1 = 0
 def fibonacci(n):
+    """
+    fibonacci sequence calculation Impl.
+    Time O(2^n) run, no cache.
+    """
     if n < 2:
         return n
     global calc1
@@ -15,6 +19,10 @@ calc2 = 0
 # the cache
 cache = {}
 def fibonacci_dynamic(n):
+    """
+    fibonacci sequence calculation Impl.
+    Time O(n) run, using cache.
+    """
     # base
     if n < 2:
         return n
@@ -33,7 +41,7 @@ def fibonacci_dynamic(n):
 
 print('\n############## MEASURE TIMES NO CACHE N=4 ################')
 t1 = time.time()
-print('The number for fibonacci(35) is: ' + str(fibonacci(35)))
+print('The number for fibonacci(25) is: ' + str(fibonacci(25)))
 t2 = time.time()
 print('computing time is: ' + str(t2 - t1))
 print('number of calculations: ' + str(calc1))
