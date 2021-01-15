@@ -33,7 +33,7 @@ def fibonacci_dynamic(n):
 
 print('\n############## MEASURE TIMES NO CACHE N=4 ################')
 t1 = time.time()
-print('The number for fibonacci(20) is: ' + str(fibonacci(20)))
+print('The number for fibonacci(35) is: ' + str(fibonacci(35)))
 t2 = time.time()
 print('computing time is: ' + str(t2 - t1))
 print('number of calculations: ' + str(calc1))
@@ -45,4 +45,5 @@ print('The number for fibonacci(900) is: ' + str(fibonacci_dynamic(900)))
 t2 = time.time()
 print('computing time is: ' + str(t2 - t1))
 print('number of calculations: ' + str(calc2))
+
 
