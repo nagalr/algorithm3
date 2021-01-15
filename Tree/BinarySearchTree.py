@@ -162,12 +162,31 @@ class BinarySearchTree:
 
         return [x.value for x in answer]
 
+    def dfs_inorder(self, node):
+        if node is None:
+            return
+        self.dfs_inorder(node.left)
+        print(node.value)
+        self.dfs_inorder(node.right)
+
+    def dfs_preorder(self, node):
+        if node is None:
+            return
+        print(node.value)
+        self.dfs_preorder(node.left)
+        self.dfs_preorder(node.right)
+
+    def dfs_postorder(self, node):
+        if node is None:
+            return
+        self.dfs_postorder(node.left)
+        self.dfs_postorder(node.right)
+        print(node.value)
 
 
-# b = BinarySearchTree()
-#
+# TESTING
 # ########## FIRST BSF ####################
-#
+# b = BinarySearchTree()
 # b.insert(9)
 # b.insert(4)
 # b.insert(20)
@@ -192,5 +211,14 @@ b.insert(1)
 b.insert(6)
 b.insert(15)
 b.insert(170)
+b.root.display() if b.root else None
+ 
+########### BFS INORDER PREODER POSTORDER ##################
 
-print(b.bfs_rec([b.root], []))
+print()  # line break
+# print(b.bfs_rec([b.root], []))
+b.dfs_inorder(b.root)
+print()  # line break
+b.dfs_preorder(b.root)
+print()  # line break
+b.dfs_postorder(b.root)
