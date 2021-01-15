@@ -1,13 +1,17 @@
 import time
 
-
+# Global variable to count calculations number
+calc1 = 0
 def fibonacci(n):
     if n < 2:
         return n
-
+    global calc1
+    calc1 += 1
     return fibonacci(n - 1) + fibonacci(n - 2)
 
 
+# Global variable to count calculations number
+calc2 = 0
 # the cache
 cache = {}
 def fibonacci_dynamic(n):
@@ -19,6 +23,8 @@ def fibonacci_dynamic(n):
         return cache[n]
     # calculate value into cache, and return it
     else:
+        global calc2
+        calc2 += 1
         cache[n] = fibonacci_dynamic(n - 1) + fibonacci_dynamic(n - 2)
         return cache[n]
 
@@ -30,6 +36,7 @@ t1 = time.time()
 print('The number for fibonacci(20) is: ' + str(fibonacci(20)))
 t2 = time.time()
 print('computing time is: ' + str(t2 - t1))
+print('number of calculations: ' + str(calc1))
 
 print('\n############## MEASURE TIMES WITH CACHE N=900 ################\n')
 t1 = time.time()
@@ -37,3 +44,5 @@ t1 = time.time()
 print('The number for fibonacci(900) is: ' + str(fibonacci_dynamic(900)))
 t2 = time.time()
 print('computing time is: ' + str(t2 - t1))
+print('number of calculations: ' + str(calc2))
+
